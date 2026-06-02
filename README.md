@@ -17,11 +17,11 @@ score, outperforming the competition baseline.
 ```
 Particles_RSD_Sensors_RegressionTask/
 ├── data/
-│   ├── raw/                  ← development.csv, evaluation.csv
-│   └── processed/            ← cleaned data (optional)
-├── models/                   ← saved trained model (.pkl)
+│   ├── raw/                  ← development.csv, evaluation.csv (not included, see below)
+│   └── processed/            ← cleaned data (generated on run)
+├── models/                   ← saved trained model (.pkl, generated on run)
 ├── notebooks/                ← EDA, experiments, model comparison
-├── outputs/                  ← predictions CSV and hexbin plot
+├── outputs/                  ← predictions CSV and hexbin plot (generated on run)
 ├── reports/                  ← full project report (PDF)
 ├── src/
 │   ├── __init__.py
@@ -32,6 +32,10 @@ Particles_RSD_Sensors_RegressionTask/
 ├── main.py                   ← full pipeline entry point
 └── requirements.txt
 ```
+
+> **Note:** `data/raw/`, `models/`, and `outputs/` are not included in the repository 
+> due to file size. Add your own `development.csv` and `evaluation.csv` to `data/raw/` 
+> before running. Models and outputs are generated automatically by `main.py`.
 
 ## Workflow
 Base experiments, EDA, and model comparisons are documented in 
@@ -46,20 +50,24 @@ Python package in `src/` and runs end-to-end via `main.py`.
 
 ```bash
 # 1. Clone the repo
-git clone _____
+git clone https://github.com/siinvictus/RegressionTask_ParticlesinRSDSensors.git
+cd Particles_RSD_Sensors_RegressionTask
 
-# 2. Create and activate virtual environment
+# 2. Add your data
+# Place development.csv and evaluation.csv in data/raw/
+
+# 3. Create and activate virtual environment
 python3 -m venv venv
 source venv/bin/activate
 
-# 3. Install dependencies
+# 4. Install dependencies
 pip install -r requirements.txt
 
-# 4. Run the pipeline
+# 5. Run the pipeline
 python main.py
 ```
 
-Output files will be saved to `outputs/`.
+Output files will be saved to `outputs/`. Trained model will be saved to `models/`.
 
 ## Results
 
