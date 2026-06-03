@@ -1,3 +1,4 @@
 C:/Users/Lenovo/Documents/GIT/datasets filter=lfs diff=lfs merge=lfs -text
 C:/Users/Lenovo/Documents/GIT/datasets filter=lfs diff=lfs merge=lfs -text
 datasets/* filter=lfs diff=lfs merge=lfs -text
+*.ipynb linguist-detectable=false
