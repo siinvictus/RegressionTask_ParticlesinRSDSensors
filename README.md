@@ -17,8 +17,8 @@ score, outperforming the competition baseline.
 ```
 Particles_RSD_Sensors_RegressionTask/
 ├── data/
-│   ├── raw/                  ← development.csv, evaluation.csv (not included, see below)
-│   └── processed/            ← cleaned data (generated on run)
+│   ├── raw/                  ← development.csv, evaluation.csv (not included)
+|
 ├── models/                   ← saved trained model (.pkl, generated on run)
 ├── notebooks/                ← EDA, experiments, model comparison
 ├── outputs/                  ← predictions CSV and hexbin plot (generated on run)
@@ -34,8 +34,8 @@ Particles_RSD_Sensors_RegressionTask/
 ```
 
 > **Note:** `data/raw/`, `models/`, and `outputs/` are not included in the repository 
-> due to file size. Add your own `development.csv` and `evaluation.csv` to `data/raw/` 
-> before running. Models and outputs are generated automatically by `main.py`.
+> due to file size from the actual training. Add your own `development.csv` and `evaluation.csv` to `data/raw/` 
+> before running (find here: https://drive.google.com/drive/folders/1O8rqMLWaUhkS8Cn6uicfMAGA1DME1JPH?usp=sharing). Models and outputs are populated automatically by `main.py`.
 
 ## Workflow
 Base experiments, EDA, and model comparisons are documented in 
